@@ -1,0 +1,120 @@
+.destinations-section {
+  padding: 5.5rem 0;
+  background-color: var(--bg-secondary);
+}
+
+.destinations-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.35rem;
+}
+
+.destination-card {
+  position: relative;
+  height: 360px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  text-align: start;
+  display: flex;
+  align-items: flex-end;
+  padding: 1.4rem;
+  transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
+}
+
+.destination-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--border-gold);
+  box-shadow: var(--shadow-lg);
+}
+
+.destination-card img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.65s ease;
+}
+
+.destination-card:hover img {
+  transform: scale(1.08);
+}
+
+.destination-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(11, 11, 14, 0.12) 0%, rgba(11, 11, 14, 0.45) 45%, rgba(11, 11, 14, 0.94) 100%);
+}
+
+.destination-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.destination-tag {
+  align-self: flex-start;
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: var(--gold-light);
+  background: rgba(200, 169, 126, 0.2);
+  border: 1px solid rgba(200, 169, 126, 0.4);
+  padding: 0.22rem 0.65rem;
+  border-radius: var(--radius-full);
+}
+
+.destination-content h3 {
+  font-size: 1.55rem;
+  color: var(--text-primary);
+}
+
+.destination-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  font-size: 0.84rem;
+  color: var(--text-secondary);
+  padding-top: 0.55rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.destination-meta strong {
+  color: var(--gold);
+}
+
+.destination-arrow {
+  color: var(--gold-light);
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+@media (max-width: 1024px) {
+  .destinations-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .destination-card {
+    height: 300px;
+  }
+}
+
+@media (max-width: 580px) {
+  .destinations-section {
+    padding: 4rem 0;
+  }
+
+  .destinations-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .destination-card {
+    height: 240px;
+  }
+}

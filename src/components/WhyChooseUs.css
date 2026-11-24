@@ -1,0 +1,141 @@
+.why-choose-us {
+  padding: 6rem 0;
+  background-color: var(--primary-color);
+  background-image: radial-gradient(circle at center, #1f1f1f 0%, #1a1a1a 100%);
+  padding: 5.5rem 0;
+  background: radial-gradient(circle at top center, rgba(200, 169, 126, 0.08), transparent 55%), var(--bg-secondary);
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+  margin-top: 4rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.35rem;
+  margin-bottom: 3rem;
+}
+
+.feature-card {
+  padding: 2rem 1.45rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 2rem;
+  align-items: flex-start;
+  gap: 0.85rem;
+}
+
+.text-center {
+  text-align: center;
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-icon {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  color: var(--secondary-color);
+  background: var(--glass-bg);
+  width: 80px;
+  height: 80px;
+  width: 54px;
+  height: 54px;
+  border-radius: 12px;
+  background: var(--gold-soft);
+  border: 1px solid var(--border-gold);
+  color: var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid var(--secondary-color);
+  font-size: 1.35rem;
+}
+
+.feature-card h3 {
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  font-size: 1.12rem;
+  color: var(--text-primary);
+}
+
+.feature-card p {
+  color: #ddd;
+  font-size: 1rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* Process Box */
+.process-box {
+  padding: 2.25rem;
+  border-color: var(--border-gold);
+}
+
+.process-heading {
+  text-align: center;
+  font-size: clamp(1.25rem, 2.4vw, 1.6rem);
+  color: var(--gold-light);
+  margin-bottom: 2rem;
+}
+
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.process-step {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  padding: 1.15rem;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+}
+
+.step-num {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--gold);
+  opacity: 0.85;
+  line-height: 1;
+}
+
+.process-step h4 {
+  font-size: 1.02rem;
+  color: var(--text-primary);
+}
+
+.process-step p {
+  font-size: 0.86rem;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 1024px) {
+  .features-grid,
+  .process-steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .why-choose-us {
+    padding: 4rem 0;
+  }
+
+  .features-grid,
+  .process-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .process-box {
+    padding: 1.35rem;
+  }
+}

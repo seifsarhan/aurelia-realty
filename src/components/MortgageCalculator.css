@@ -1,0 +1,251 @@
+.calculator-section {
+  padding: 5.5rem 0;
+  background-color: var(--bg-primary);
+}
+
+.calculator-wrapper {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 2.25rem;
+  padding: 2.25rem;
+  align-items: center;
+}
+
+.calc-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.calc-control-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.calc-label-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.calc-label-row label {
+  font-size: 0.94rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.calc-value-badge {
+  color: var(--gold-light);
+  background: var(--gold-soft);
+  border: 1px solid var(--border-gold);
+  padding: 0.25rem 0.7rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  direction: ltr;
+}
+
+.calc-control-group input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 6px;
+  border-radius: 99px;
+  background: rgba(255, 255, 255, 0.12);
+  outline: none;
+  cursor: pointer;
+}
+
+.calc-control-group input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--gold);
+  border: 3px solid #0B0B0E;
+  box-shadow: 0 0 0 2px rgba(200, 169, 126, 0.45);
+  transition: transform 0.2s ease;
+}
+
+.calc-control-group input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+}
+
+.calc-control-group input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--gold);
+  border: 3px solid #0B0B0E;
+}
+
+.range-bounds {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.calc-hint {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.calc-hint i {
+  color: var(--gold);
+}
+
+/* Summary Column */
+.calc-summary {
+  background: rgba(11, 11, 14, 0.65);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-md);
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.35rem;
+}
+
+.calc-monthly-card {
+  text-align: center;
+  padding-bottom: 1.15rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.monthly-label {
+  display: block;
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.4rem;
+}
+
+.monthly-amount {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.monthly-amount strong {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  color: var(--gold);
+  font-weight: 800;
+  line-height: 1.1;
+  direction: ltr;
+}
+
+.monthly-amount span {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+}
+
+.calc-bar {
+  width: 100%;
+  height: 12px;
+  border-radius: 99px;
+  overflow: hidden;
+  display: flex;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.bar-seg {
+  height: 100%;
+  transition: width 0.3s ease;
+}
+
+.seg-down {
+  background: var(--gold);
+}
+
+.seg-principal {
+  background: #60A5FA;
+}
+
+.seg-interest {
+  background: #F59E0B;
+}
+
+.calc-breakdown-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.95rem;
+}
+
+.breakdown-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-subtle);
+  border-radius: 10px;
+  padding: 0.75rem;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-top: 0.35rem;
+  flex-shrink: 0;
+}
+
+.dot-down {
+  background: var(--gold);
+}
+
+.dot-principal {
+  background: #60A5FA;
+}
+
+.dot-interest {
+  background: #F59E0B;
+}
+
+.dot-total {
+  background: var(--success);
+}
+
+.breakdown-item small {
+  display: block;
+  font-size: 0.76rem;
+  color: var(--text-muted);
+}
+
+.breakdown-item strong {
+  font-size: 0.98rem;
+  color: var(--text-primary);
+  direction: ltr;
+  display: inline-block;
+}
+
+@media (max-width: 960px) {
+  .calculator-wrapper {
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .calculator-section {
+    padding: 4rem 0;
+  }
+
+  .calculator-wrapper {
+    padding: 1.15rem;
+  }
+
+  .calc-summary {
+    padding: 1.15rem;
+  }
+
+  .calc-breakdown-grid {
+    grid-template-columns: 1fr;
+  }
+}
